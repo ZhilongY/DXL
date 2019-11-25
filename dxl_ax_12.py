@@ -122,13 +122,13 @@ while 1:
     wheelMode(DXL_IDs[0], WHEEL_DISABLE)
     wheelMode(DXL_IDs[1], WHEEL_ENABLE)
     #wheelMode(DXL_IDs[2], WHEEL_DISABLE)
-    servoWrite(DXL_IDs[0],dxl_goal_position[index])
-    #servoSpeed(DXL_IDs[1],dxl_speed[index])
+    #servoWrite(DXL_IDs[0],dxl_goal_position[index])
+    servoSpeed(DXL_IDs[1],500)
     #servoWrite(DXL_IDs[2],dxl_goal_position[index])
-   if servoRead(DXL_IDs[0])<512:
-        index=1
-   if servoRead(DXL_IDs[0])>512:
-        index=0
+   #if servoRead(DXL_IDs[0])<512:
+    #    index=1
+   #if servoRead(DXL_IDs[0])>512:
+    #    index=0
 
 portClose()
     #servoWrite(DXL_IDs[0],dxl_goal_position[index])
